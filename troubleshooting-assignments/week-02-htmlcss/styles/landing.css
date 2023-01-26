@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+/* 
+Below updates all links to not have an underline and to look at the encasing element to detirmine color. 
+*/
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* 
+Below detirmines the size and positioning of the hero image.
+Makes the image the background instead of using an image within the element to allow for easier control.
+*/
+
+.hero-image {
+    background: url(../images/opt-title3.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 68vh;
+}
+
+/*
+Below is an example of using flex-box. The direction is column by default.
+The child elements within the nav block are then arranged based on the properties in nav.
+*/
+
+nav {
+    background: #c9c9c9;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    justify-content:center;
+    margin-top: -4px;
+    margin-bottom: 50px;
+    min-width: 100%;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/*
+The code below only affects the <a> elements inside the <nav> block.
+*/
+
+nav a {
+    cursor: pointer;
+    background: #c9c9c9;
+    color: black;
+    border: 0;
+    padding: 10px 30px 10px 30px;
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+}
+
+nav a:hover, nav a:active {
+    background: #a3a3a3;
+    color: white;
+}
+
+#container {
+    padding: 50px 50px;
+}
+
+.section {
+    padding-bottom: 50px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+.card {
+    cursor: pointer;
+    background: #e7e7e7;
+    filter: grayscale(100%);
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    transition: filter 300ms;
+    transition: box-shadow 300ms;
+}
+
+.card:hover, .card:active {
+    filter: grayscale(0);
+    background: lightblue;
+    box-shadow: 0 0 25px gray;
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+    margin: -20px 0 15px -20px;
+    width: 240px;
+}
+
+.card h3 {
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 14pt;
+}
+
+.card p {
+    font-size: 12pt;
+}
+
+footer {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 10px;
+}
+
+footer ul {
+    background: #c9c9c9;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    list-style: none;
+}
+
+footer ul li {
+    padding: 10px 10px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .hero-image {
+        height: 34vh;
+    }
+}
+
