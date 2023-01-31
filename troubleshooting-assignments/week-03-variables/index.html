@@ -16,17 +16,17 @@
             var verb01, verb02, verb03;
             var noun01, noun02, noun03;
             var question;
-            var emotions;
+            var emotion;
             var adjective01, adjective02;
             var dodonot;
             var event;
             var employeeType;
             var place;
-            ver relationship;
+            var relationship;
             
             prompt("Please enter answers to the following prompts to see a madlibs story!");
             
-            prompt("Provide a street name.");
+            street = prompt("Provide a street name.");
             
             verb01 = prompt("Provide a verb.");
             noun01 = prompt("Provide a noun.");
@@ -44,7 +44,7 @@
             relationship = prompt("Provide a relationship type.");
             adjective02 = prompt("Provide a adjective (word to describe something).");
             
-            document.getElementById("container").innerHTML = "<p>I was walking down " + street + " the other day and a student " + verb01 + "ing a " + noun01 + " approached me and asked me, \"" + question + "\" I was " + emotion + ". I couldn't believe a " + adjective + " person, who was also " + verb02 + "ing a " + noun02 + " at the time. I said I " + dodonot + " and started walking away since I was late for a " + event + " called \"" + adjective02 + " " + noun03 + ".\" They started following me and started to " + verb03 + ". I found out they were the " + employeeType + " for the event! They snuck me into " + place + " and we have been " + relationship + " ever since!</p>";
+            document.getElementById("container").innerHTML = "<p>I was walking down " + street + " the other day and a student " + verb01 + "ing a " + noun01 + " approached me and asked me, \"" + question + "\" I was " + emotion + ". I couldn't believe a " + adjective01 + " person, who was also " + verb02 + "ing a " + noun02 + " at the time. I said I " + dodonot + " and started walking away since I was late for a " + event + " called \"" + adjective02 + " " + noun03 + ".\" They started following me and started to " + verb03 + ". I found out they were the " + employeeType + " for the event! They snuck me into " + place + " and we have been " + relationship + " ever since!</p>";
         
         </script>
         
