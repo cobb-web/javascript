@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 20pt;
+}
+
+#chart {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    padding: 10px;
+}
+
+.chart-label, .data-bar {
+    font-size: 12pt;
+}
+
+.chart-label {
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
+
+.data-bar {
+    background: lightgray;
+    padding: 5px 10px 5px 20px;
+    border-radius: 0 5px 5px 0;
+    text-align: right;
+    width: 500px;
+}
