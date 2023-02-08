@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<!--
+
+Troubleshooting Prompt:
+
+In the code below, where did I go wrong? When I put in "dogs" or "wolves", I want it to say I absolutely love them, but instead, it says nothing. (fix it and submit it)
+
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Troubleshooting Week 4 Issue 3</title>
+        
+        <style>
+            #result-message {
+                color: darkcyan;
+                margin: 200px auto;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 42pt;
+                max-width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="result-message">
+        
+        </div>
+        
+        <script>
+            var resultMessage = "You said you liked ";
+            
+            var userInput = prompt("What is your favorite animal? (use the plural of the word)");
+            
+            var wordToUse1 = "like";
+            var wordToUse2 = "absolutely love";
+            var wordToUse3 = "am not a fan of";
+            
+            resultMessage += userInput + ".<br><br>";
+            
+            if (userInput == "cats") {
+                resultMessage += "Great! I also " + wordToUse1 + " " + userInput + ".";
+            }
+            else if (userInput == "dogs" && userInput == "wolves") {
+                resultMessage += "Great! I " + wordToUse2 + " " + userInput + "!";
+            }
+            else if (userInput == "spiders") {
+                resultMessage += "Ew. I " + wordToUse3 + " " + userInput + ".";
+            }
+            else {
+                resultMessage += "";
+            }
+            
+            document.getElementById("result-message").innerHTML = resultMessage;
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>

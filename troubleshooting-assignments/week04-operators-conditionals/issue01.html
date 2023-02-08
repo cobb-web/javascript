@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!--
+
+Troubleshooting Prompt:
+
+I'm starting code for a number guessing game. I don't know why nothing appears. How can my if/else statement be fixed? (fix it and submit it)
+
+Hint: The error in the console reads "Uncaught SyntaxError: Unexpected identifier 'correctNumber'" on line 41.
+
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Troubleshooting Week 4 Issue 1</title>
+        
+        <style>
+            #result-message {
+                color: purple;
+                margin: 200px auto;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 42pt;
+                max-width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="result-message">
+        
+        </div>
+        
+        <script>
+            var userInput = prompt("Let's play 'Guess the number!' Guess a number between 1 and 100.");
+            
+            var correctNumber = 56;
+            
+            if (userInput correctNumber) {
+                document.getElementById("result-message").innerHTML = "You guessed the number correctly!";
+            }
+            else {
+                document.getElementById("result-message").innerHTML = "You guessed incorrectly. Reload the page to try again.";
+            }
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>

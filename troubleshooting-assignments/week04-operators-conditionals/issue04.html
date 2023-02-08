@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!--
+
+Troubleshooting Prompt:
+
+I can't seem to get the color of the resulting circle to be blue, green, yellow, nor orange - it most often appears red instead. How do I fix my code to have the other colors appear to fit the following idea:
+
+10-20: red
+21-30: orange
+31-40: yellow
+41-50: green
+51-60: blue
+61-70: indigo
+71-80: purple
+
+(fix it and submit it)
+
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Troubleshooting Week 4 Issue 34</title>
+        
+        <style>
+            #circle {
+                background: black;
+                margin: 200px auto;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 42pt;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="circle">
+        
+        </div>
+        
+        <script>
+            var userInput = prompt("Type a number between 10 and 80.");
+            
+            if (userInput >= 70) {
+                document.getElementById("circle").style.background = "purple";
+            }
+            else if (userInput >= 60) {
+                document.getElementById("circle").style.background = "indigo";
+            }
+            else if (userInput >= 10) {
+                document.getElementById("circle").style.background = "red";
+            }
+            else if (userInput >= 50) {
+                document.getElementById("circle").style.background = "blue";
+            }
+            else if (userInput >= 40) {
+                document.getElementById("circle").style.background = "green";
+            }
+            else if (userInput >= 30) {
+                document.getElementById("circle").style.background = "yellow";
+            }
+            else if (userInput >= 20) {
+                document.getElementById("circle").style.background = "orange";
+            }
+            else {
+                alert("Your number was too low!");
+            }
+            
+            document.getElementById("circle").style.width = (userInput * 10) + "px";
+            document.getElementById("circle").style.height = (userInput * 10) + "px";
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>

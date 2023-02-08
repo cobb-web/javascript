@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!--
+
+Troubleshooting Prompt:
+
+I'm starting code for a number guessing game. When the correct number is guessed, it still says the guess was too low. How do I fix that? (fix it and submit it)
+
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Troubleshooting Week 4 Issue 2</title>
+        
+        <style>
+            #result-message {
+                color: black;
+                margin: 200px auto;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 42pt;
+                max-width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="result-message">
+        
+        </div>
+        
+        <script>
+            var userInput = prompt("Let's play 'Guess the number!' Guess a number between 1 and 100.");
+            
+            var correctNumber = 42;
+            
+            if (userInput > correctNumber) {
+                document.getElementById("result-message").innerHTML = "You guessed too high. Reload the page to try again.";
+            }
+            else if (userInput <= correctNumber) {
+                document.getElementById("result-message").innerHTML = "You guessed too low. Reload the page to try again.";
+            }
+            else {
+                document.getElementById("result-message").innerHTML = "You guessed the right number!";
+            }
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>

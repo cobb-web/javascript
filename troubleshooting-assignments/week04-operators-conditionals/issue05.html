@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!--
+
+Troubleshooting Prompt:
+
+My secret message appears in the alert instead of just being able to be read in the code. How do I fix the if statement so the code remains active, but doesn't pop up?
+
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Troubleshooting Week 4 Issue 5</title>
+        
+        <style>
+            #result-message {
+                color: blue;
+                margin: 200px auto;
+                text-align: center;
+                font-family: Arial, sans-serif;
+                font-size: 42pt;
+                max-width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="result-message">
+        
+        </div>
+        
+        <script>
+            var timesAsked = 0;
+            
+            var userInput1 = prompt("Give me a number.");
+            
+            timesAsked++;
+            
+            if (timesAsked < 3) {
+                var userInput2 = prompt("Give me a second number.");
+                timesAsked++;
+            }
+            
+            if (timesAsked < 3) {
+                var userInput3 = prompt("Give me a third number.");
+                timesAsked++;
+            }
+            
+            if (timesAsked <= 3) {
+                alert("Secret message! You should only be able to see this in the code!");
+            }
+            
+            var resultOrder;
+            
+            if (userInput1 < userInput2) {
+                if (userInput1 < userInput3) {
+                    if (userInput2 < userInput3) {
+                        resultOrder = userInput1 + ", " + userInput2 + ", " + userInput3;
+                    }
+                    else {
+                        resultOrder = userInput1 + ", " + userInput3 + ", " + userInput2;
+                    }
+                }
+                else {
+                    resultOrder = userInput3 + ", " + userInput1 + ", " + userInput2;
+                }
+            }
+            else {
+                if (userInput1 > userInput3) {
+                    if (userInput2 > userInput3) {
+                        resultOrder = userInput3 + ", " + userInput2 + ", " + userInput1;
+                    }
+                    else {
+                        resultOrder = userInput2 + ", " + userInput3 + ", " + userInput1;
+                    }
+                }
+                else {
+                    resultOrder = userInput2 + ", " + userInput1 + ", " + userInput3;
+                }
+            }
+            
+            document.getElementById("result-message").innerHTML = "Here are your numbers in order:<br><br>" + resultOrder + "<br><br>";
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>
