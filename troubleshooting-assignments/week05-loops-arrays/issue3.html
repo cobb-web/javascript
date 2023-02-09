@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!--
+    This lists "undefined" as a name - how do I stop that? (fix and submit).
+
+    Hint: There are multiple ways to fix this!
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 5 Troubleshooting Issue 3</title>
+        
+        <style>
+            #message {
+                font-size: 24pt;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="message">
+            
+        </div>
+        
+        <script>
+            var names = [
+                "Monica",
+                "Erica",
+                "Rita",
+                "Tina",
+                "Sandra",
+                "Mary",
+                "Jessica"
+            ];
+            
+            for (let i = 0; i <= names.length; i ++) {
+                document.getElementById("message").innerHTML += names[i] + "<br>";
+            }
+        
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>

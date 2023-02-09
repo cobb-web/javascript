@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!--
+    This number guessing game gets stuck and won't show the "Congrats!" message. (fix and submit).
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 5 Troubleshooting Issue 1</title>
+        
+        <script>
+            var randomNum = Math.floor(Math.random() * 100);
+            var numGuesses = 0;
+            var correctGuess = false;
+            
+            alert("Welcome to guess the number!")
+            
+            var userGuess = prompt("Guess a number between 0 and 100.");
+            
+            while (userGuess == "") {
+                var userGuess = prompt("Guess a number between 0 and 100.");
+            }
+            
+            while (correctGuess != true) {
+                if (userGuess == randomNum) {
+                    alert("You guessed the number correctly!");
+                }
+                else {
+                    if (userGuess < randomNum) {
+                        userGuess = prompt("Your number was too low. Try again!");
+                    }
+                    if (userGuess > randomNum) {
+                        userGuess = prompt("Your number was too high. Try again!");
+                    }
+                }
+            }
+            
+            alert("Congrats!");
+        </script>
+    </head>
+    <body>
+        <header></header>
+        
+        <div> </div>
+        
+        <footer></footer>
+    </body>
+</html>

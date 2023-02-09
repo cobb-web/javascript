@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!--
+    The full array appears per line instead of one word per line. Fix it to show each word once per line. (fix and submit).
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 5 Troubleshooting Issue 5</title>
+        
+        <style>
+            #message {
+                font-size: 24pt;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="message">
+            
+        </div>
+        
+        <script>
+            var words = [];
+            
+            var stillAsking = true;
+            
+            while (stillAsking) {
+                let userInput = prompt("Add a word to the list! (type \"end\" to see the final list.)");
+                
+                if (userInput != "end") {
+                    words.push(userInput);
+                }
+                else {
+                    stillAsking = false;
+                }
+            }
+            
+            document.getElementById("message").innerHTML = "<p>Here are the words you entered:</p>";
+            document.getElementById("message").innerHTML += "<ul>";
+            
+            for (let i = 0; i < words.length; i++) {
+                document.getElementById("message").innerHTML += "<li>" + words + "</li>";
+            }
+        
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<!--
+    The links are correct, but they all say "home" - fix it so the words are correct. (fix and submit).
+
+    Hint: There are multiple ways to fix this!
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 5 Troubleshooting Issue 4</title>
+        
+        <style>
+            
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            
+            nav {
+                font-family: 'Georgia', serif;
+                width: 200px;
+            }
+            
+            nav ul {
+                background: lightgray;
+            }
+            
+            nav ul li {
+                color: black;
+                padding: 20px;
+                font-size: 2em;
+            }
+            
+            nav ul li:hover {
+                cursor: pointer;
+                color: red;
+                background: #222;
+                padding: 20px;
+                font-size: 2em;
+            }
+            
+            nav ul li a {
+                color: inherit;
+                text-decoration: none;
+            }
+            
+            nav ul li a:hover {
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        
+        <nav>
+            <ul id="menu">
+            </ul>
+        </nav>
+        
+        <div id="message">
+            
+        </div>
+        
+        <script>
+            var menuItems = [
+                "Home",
+                "About",
+                "Portfolio",
+                "Resume",
+                "Contact"
+            ];
+            
+            var menuItemURLs = [
+                "index.html",
+                "about.html",
+                "portfolio.html",
+                "resume.html",
+                "contact.html"
+            ];
+            
+            for (let i = 0; i < menuItems.length; i ++) {
+                document.getElementById("menu").innerHTML += "<li><a href=\"" + menuItemURLs[i] + "\">" + menuItems[0] + "</a></li>";
+            }
+        
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>
