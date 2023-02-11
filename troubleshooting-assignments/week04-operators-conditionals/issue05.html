@@ -34,22 +34,22 @@ My secret message appears in the alert instead of just being able to be read in 
         <script>
             var timesAsked = 0;
             
-            var userInput1 = prompt("Give me a number.");
+            var userInput1 = Number(prompt("Give me a number."));
             
             timesAsked++;
             
             if (timesAsked < 3) {
-                var userInput2 = prompt("Give me a second number.");
+                var userInput2 = Number(prompt("Give me a second number."));
                 timesAsked++;
             }
             
             if (timesAsked < 3) {
-                var userInput3 = prompt("Give me a third number.");
+                var userInput3 = Number(prompt("Give me a third number."));
                 timesAsked++;
             }
             
             if (timesAsked <= 3) {
-                alert("Secret message! You should only be able to see this in the code!");
+                //Secret message! You should only be able to see this in the code!
             }
             
             var resultOrder;
@@ -67,7 +67,7 @@ My secret message appears in the alert instead of just being able to be read in 
                     resultOrder = userInput3 + ", " + userInput1 + ", " + userInput2;
                 }
             }
-            else {
+            else { debugger;
                 if (userInput1 > userInput3) {
                     if (userInput2 > userInput3) {
                         resultOrder = userInput3 + ", " + userInput2 + ", " + userInput1;

@@ -39,7 +39,7 @@ I'm starting code for a number guessing game. When the correct number is guessed
             if (userInput > correctNumber) {
                 document.getElementById("result-message").innerHTML = "You guessed too high. Reload the page to try again.";
             }
-            else if (userInput <= correctNumber) {
+            else if (userInput < correctNumber) {
                 document.getElementById("result-message").innerHTML = "You guessed too low. Reload the page to try again.";
             }
             else {

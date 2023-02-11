@@ -45,7 +45,7 @@ In the code below, where did I go wrong? When I put in "dogs" or "wolves", I wan
             if (userInput == "cats") {
                 resultMessage += "Great! I also " + wordToUse1 + " " + userInput + ".";
             }
-            else if (userInput == "dogs" && userInput == "wolves") {
+            else if (userInput == "dogs" || userInput == "wolves") {
                 resultMessage += "Great! I " + wordToUse2 + " " + userInput + "!";
             }
             else if (userInput == "spiders") {
