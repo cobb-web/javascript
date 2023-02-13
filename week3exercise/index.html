@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>Cobb Games</title>
+
+    </head>
+
+    <body>
+
+        <header></header>
+
+
+        <div id ="message">
+
+        </div>
+
+        <script>
+            var input, result;
+
+            var input = prompt("What's your name?")
+           
+            while (input == "") {
+                var input = "Player1";
+            }
+
+            alert (result = input + " is your superhero name.");
+
+            document.getElementById("message").innerHTML += "Nice to meet you, " + input + "." + "<br>";
+        
+            document.getElementById("message").innerHTML += "Hold on " + input + "...waiting for your friends to join.";
+            
+
+
+        </script>
+
+        
+
+        <footer></footer>
+
+    </body>
+
+</html>
