@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>For In Loop Example</title>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="content">
+        </div>
+        
+        <script>
+            
+            var items = [ "Apples", "Bananas", "Cherries", "Dates", "Peaches" ];
+            
+            document.getElementById("content").innerHTML = "My list of items:<br><br>";
+            
+            for (let thing in items) {
+
+                document.getElementById("content").innerHTML += items[thing] + "<br>";
+
+            }
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>
