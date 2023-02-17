@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Shopping</title>
+  </head>
+
+  <body>
+    <header></header>
+
+    <div id="result-message"></div>
+    <div id="result-message2"></div>
+    <div id="result-message3"></div>
+    <div id="total"></div>
+
+    <script>
+      var userInput = prompt("How many oranges? (in numbers)");
+      var orangeCart = 10;
+      var userInput2 = prompt("How many mangoes? (in numbers)");
+      var mangoCart = 20;
+      var userInput3 = prompt("How many pears? (in numbers)");
+      var pearCart = 30;
+      
+      if (userInput == "") {
+        document.getElementById("result-message").innerHTML = "No entries.";
+      }
+      else if (userInput <= orangeCart) {
+        document.getElementById("result-message").innerHTML = "Great, " + userInput + " oranges added to cart.";
+      
+      } else if (userInput > orangeCart) {
+        document.getElementById("result-message").innerHTML = "Thats too much! We only have 10 oranges.";
+      
+      } 
+      if (userInput2 == "") {
+        document.getElementById("result-message2").innerHTML = "No entries.";
+      }
+      else if (userInput2 <= mangoCart) {
+        document.getElementById("result-message2").innerHTML = "Great, " + userInput2 + " mangoes added to cart.";
+      
+      } else if (userInput2 > mangoCart) {
+        document.getElementById("result-message2").innerHTML = "Thats too much! We only have 20 mangoes.";
+      
+      } 
+      if (userInput3 == "") {
+        document.getElementById("result-message3").innerHTML = "No entries.";
+      }
+      else if (userInput3 <= pearCart) {
+        document.getElementById("result-message3").innerHTML = "Great, " + userInput3 + " pears added to cart.";
+      
+      } else if (userInput3 > pearCart) {
+        document.getElementById("result-message3").innerHTML = "Thats too much! We only have 30 pears.";
+      }
+
+      var totalCart = Number(userInput) + Number(userInput2) + Number(userInput3);
+      document.getElementById("total").innerHTML = "Total: " + totalCart;
+
+    </script>
+
+    <footer></footer>
+  </body>
+</html>
