@@ -1,0 +1,32 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Loop and Array Example</title>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="content">
+        </div>
+        
+        <script>
+            
+            var items = [
+                "Apples",
+                "Bananas",
+                "Cherries",
+                "Dates",
+                "Peaches"
+            ];
+            
+            document.getElementById("content").innerHTML = "My list of items:<br><br>";
+
+            for (let i = 0; i < items.length; i++) {
+                document.getElementById("content").innerHTML += items[i] + "<br>";
+            }
+            
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Number Guessing Game</title>
+        
+        <script>
+            var randomNumber = Math.ceil(Math.random() * 100);
+            
+            var userInput = prompt("Guess the number!");
+            
+            while (userInput != randomNumber) {
+                
+                if (userInput < randomNumber) {
+                    userInput = prompt("Too low! Guess another number.");
+                }
+                else {
+                    userInput = prompt("Too high! Guess another number.");
+                }
+                
+            }
+            
+            alert("You guessed the number!");
+            
+        </script>
+        
+    </head>
+    <body>
+        
+    </body>
+</html>

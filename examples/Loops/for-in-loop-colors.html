@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>For In Loop Example 2</title>
+        <style>
+            #dots {
+                display: flex;
+            }
+            
+            #dots div {
+                margin: 10px;
+                border-radius: 50%;
+                background: gray;
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        
+        <div class="circle-container">
+            <div id="dots"></div>
+        </div>
+        
+        <script>
+            
+            var colors = [ "red", "orange", "yellow", "green", "blue", "purple" ];
+            
+            for (let item in colors) {
+
+                document.getElementById("dots").innerHTML += "<div id='circle-" + item + "'></div>";
+                document.getElementById("circle-" + item).style.background = colors[item];
+
+            }
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>
