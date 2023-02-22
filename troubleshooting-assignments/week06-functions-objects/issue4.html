@@ -1,0 +1,36 @@
+<!--
+    I want this to turn red when place my cursor over it and green when I remove it.
+    I put the events on the sqaure, but it won't turn green. How do I fix this? (fix and submit).
+-->
+
+<html>
+    <head>
+        <title>Trying to get a hover effect to work with functions</title>
+    </head>
+    
+    <style>
+        #row-1 {
+            float: left;
+            background-color: seagreen;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    
+
+    <body>
+        <div id="row-1" onmouseenter="changeColor('red');" onmouseleave="changeColor('seagreen')"></div>
+        <script>
+            
+        function changeColor(color) {
+            document.getElementById("row-1").style.backgroundColor = "red";
+            document.getElementById("row-1").innerHTML = '';
+            document.getElementById("row-1").innerHTML += '<div class="square"></div>';
+        }
+        
+    </script>
+    </body>
+    
+    
+</html>

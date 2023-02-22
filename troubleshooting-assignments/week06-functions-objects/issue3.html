@@ -1,0 +1,73 @@
+<!--
+    I got this function to run when I load the page, but I need to get the button to run the function again when I click it. (fix and submit).
+-->
+
+<html>
+    <head>
+        <title>Trying to Get a Button to Work</title>
+    </head>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        #message {
+            margin: 0 auto;
+            text-align: center;
+            width: 500px;
+        }
+        
+        #play-again {
+            display: none;
+            color: black;
+            background: lightgray;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+        }
+        
+        #play-again:hover {
+            color: white;
+            background: darkgray;
+        }
+    </style>
+    
+    <script>
+        
+        function playGame() {
+            
+            let randNum = Math.ceil(Math.random() * 100);
+            
+            let guess = prompt("Guess a number between 1 and 100");
+            
+            while (guess != randNum) {
+                if (guess < randNum) {
+                    guess = prompt("Too low! Guess again.");
+                }
+                else {
+                    guess = prompt("Too high! Guess again.")
+                }
+            }
+            
+            document.getElementById("message").innerHTML = 'You won!<br><br><iframe src="https://giphy.com/embed/WTEcIzqMRffRssYJjy" width="480" height="471" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Slotomaniaofficial-slots-slotomania-WTEcIzqMRffRssYJjy">via GIPHY</a></p>';
+            
+            document.getElementById("play-again").style.display = "block";
+            document.getElementById("play-again").innerHTML = "Play Again!";
+        }
+        
+    </script>
+    <body>
+        <div id="message"></div>
+        
+        <div id="play-again">Play Again!</div>
+        
+        <script>
+            
+            playGame(); // Plays when everything is loaded
+        
+        </script>
+    </body>
+</html>

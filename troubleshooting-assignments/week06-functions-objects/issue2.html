@@ -1,0 +1,29 @@
+<!--
+    This should pop up a prompt for my name and greeting when I load the page like in issue one, 
+    but I want to send the person's name into the function to use there. 
+    The prompt shows up, but it's not in the greeting. 
+    How do I get it to pop up my greeting using the function? (fix and submit).
+-->
+
+<html>
+    <head>
+        <title>Trying to Get a Function with a Parameter to Work</title>
+    </head>
+    
+    <script>
+        var name = prompt("What is your name?");
+        
+        function sayHello(userName) {
+            
+            let greeting = "Hello " + userName + "!";
+            
+            alert(greeting);
+            
+        }
+        
+        sayHello();
+        
+    </script>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!--
+    Size appears for undifined for both things. Fit it, please? (fix and submit).
+-->
+
+<html>
+    <head>
+        <title>Diplaying Object Properties</title>
+    </head>
+    
+
+    <body>
+        <div id="content"></div>
+        <script>
+            
+            class Thing {
+                constructor(id, name, color, size) {
+                    this.id = id;
+                    this.name = name;
+                    this.color = color;
+                    size = size;
+                }
+            }
+            
+            var things = [ 
+                new Thing(1, "balloon", "lime green", "big"),
+                new Thing(2, "ruler", "blue", "small")
+            ];
+            
+            for (let x in things) {
+                document.getElementById("content").innerHTML += "ID: " + things[x].id + "<br>";
+                document.getElementById("content").innerHTML += "Name: " + things[x].name + "<br>";
+                document.getElementById("content").innerHTML += "Color: " + things[x].color + "<br>";
+                document.getElementById("content").innerHTML += "Size: " + things[x].size + "<br><br>";
+            }
+        </script>
+    </body>
+    
+    
+</html>
