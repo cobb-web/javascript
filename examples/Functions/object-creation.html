@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Object Example</title>
+        
+        <script>
+            var person =
+                {
+                    fname: "Jane",
+                    lname: "Doe",
+                    birthMonth: 6,
+                    birthDay: 30,
+                    birthYear: 1984,
+                    member: true,
+                    fullName: function() {
+                        return (this.fname + " " + this.lname);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="content"></div>
+        
+        <script>
+            document.getElementById("content").innerHTML = "Full name: " + person.fullName();
+        </script>
+        <footer></footer>
+    </body>
+</html>

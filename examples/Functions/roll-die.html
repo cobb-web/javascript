@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Functions Example: Rolling a Die</title>
+    </head>
+    <style>
+        body {
+            margin: 0 auto;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        
+        #dice-result {
+            display: none;
+            background: skyblue;
+            margin: 20px auto;
+            border-radius: 3px;
+            padding: 10px;
+            font-size: 45pt;
+            vertical-align: middle;
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+    <body>
+        <header></header>
+        
+        <div id="result-label"><p></p></div>
+        
+        <div id="dice-result"></div>
+        
+        <button onclick="rollDie()">Roll Die</button>
+        
+        <div>
+            <form name="die-info">
+                <p>How many sides does the die have? <input type="text" name="die" value="6" size="1"></p>
+            </form>
+        </div>
+        
+        <script>
+            
+            function rollDie() {
+                
+                // Get number of sides from form
+                var numSides = document.forms["die-info"]["die"].value;
+                
+                // Get random number to be the die roll
+                var rolledNumber = Math.ceil(Math.random() * numSides);
+                
+                // Update result label
+                document.getElementById("result-label").innerHTML = "<p>You rolled:</p>";
+                
+                // Make the dice result visible and show the number
+                document.getElementById("dice-result").style.display = "block";
+                document.getElementById("dice-result").innerHTML = rolledNumber;
+            }
+            
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>
