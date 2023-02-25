@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Cobbs Arrays</title>
+  </head>
+
+  <body>
+    <header></header>
+
+    <div id="content"></div>
+
+    <script>
+      var balls = ["round", "square", "oval", "hexagon"];
+
+      function displayMyArray(message) {
+        document.getElementById("content").innerHTML +=
+          "<br>" + message + "<br>";
+
+        for (let x in balls)
+          document.getElementById("content").innerHTML += balls[x] + "<br>";
+      }
+
+      displayMyArray("My Collection of balls:");
+
+      balls.push("textured");
+      displayMyArray("Collection of balls + textured at end");
+
+      balls.splice(2, 0, "octagon");
+      displayMyArray("Collection of balls + octagon in the middle");
+
+      balls.unshift("pentagon");
+      displayMyArray("Collection of balls + pentagon at begining");
+
+      balls[4] = "triangle";
+      displayMyArray("Collection of balls updated with triangle");
+
+      balls.pop();
+      displayMyArray("Collection of balls with last ball removed");
+
+      balls.shift();
+      displayMyArray("Collection of balls with first ball removed");
+
+      var balls2 = balls;
+
+      balls.sort();
+
+      for (let count = 0; count < 5; count++) {
+        document.getElementById("content").innerHTML += count;
+        document.getElementById("content").innerHTML += "<br>";
+      }
+      
+      "<br>";
+
+      var count = 0;
+
+      while (count < 8) {
+        document.getElementById("content").innerHTML += count;
+        document.getElementById("content").innerHTML += "<br>";
+
+        count++;
+      }
+    </script>
+
+    <footer></footer>
+  </body>
+</html>
