@@ -14,6 +14,7 @@
     <div id="result-message2"></div>
     <div id="result-message3"></div>
     <div id="total"></div>
+    <div id="packaging"></div>
 
     <script>
       var userInput = prompt("How many oranges? (in numbers)");
@@ -56,6 +57,26 @@
       var totalCart = Number(userInput) + Number(userInput2) + Number(userInput3);
       document.getElementById("total").innerHTML = "Total: " + totalCart;
 
+
+      var package = prompt("Type 1 for Plastic bag, Type 2 for Paper bag");
+
+      while (package =="") {
+      var package = prompt("Type 1 for Plastic bag, Type 2 for Paper bag");
+      }
+
+      switch(package) {
+        case "1":
+        document.getElementById("packaging").innerHTML += "You picked Plastic bag.";
+        break;
+       
+        case "2":
+        document.getElementById("packaging").innerHTML += "You picked Paper bag.";
+        break;
+
+        default:
+          break;
+
+      }
     </script>
 
     <footer></footer>
