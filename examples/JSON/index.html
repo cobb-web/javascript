@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title of the Webpage</title>
+        <script src="obj.js"></script>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="content"></div>
+        
+        <div id="content-JSON"></div>
+        
+        <script>
+            var isSmartTV;
+            
+            if (parsedData.smartTV) {
+                isSmartTV = "It is a smart TV.";
+            }
+            else {
+                isSmartTV = "";
+            }
+            
+            document.getElementById("content").innerHTML = "This television is a " + parsedData.size + " " + parsedData.brand + " TV with a " + parsedData.display + " display. " + isSmartTV;
+            
+            document.getElementById("content-JSON").innerHTML = televisionStringified;
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>
