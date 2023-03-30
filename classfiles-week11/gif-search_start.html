@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GIPHY Search</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+
+        // Global variables
+
+        // Get Parameters
+        
+        // HTTP Request
+
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'http://www.example.com/api-endpoint?parameter=value');
+
+        request.onload = function() {
+            var response = request.response;
+
+            var parsedData = JSON.parse(response);
+
+            // Code to run with response object
+        }
+
+        request.send();
+        
+    </script>
+</head>
+<body>
+    <form id="search-form">
+        <div class="formfield">
+            <label for="searchTerm">Search Term:</label> 
+            <input type="text" name="searchTerm" id="searchTerm" value="computers">
+        </div>
+        <div class="formfield">
+            <label for="limit">Number of Images:</label> 
+            <input type="number" name="limit" id="limit" max="50" min="1" value="25">
+        </div>
+        <div class="formfield"><button type="button">Get Images</button></div>
+    </form>
+
+    <section>
+        <h2>Search Results:</h2>
+        <div id="content"></div>
+    </section>
+</body>
+</html>

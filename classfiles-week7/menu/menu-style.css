@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 14pt;
+}
+
+#nav-container {
+    background: #ccc;
+    width: 200px;
+    margin: 25px;
+}
+
+#menu-btn {
+    padding: 15px;
+    background: #777;
+    color: white;
+    cursor: pointer;
+}
+
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    background: #ccc;
+    }
+
+#nav-links li {
+    list-style: none;
+    padding: 15px;
+}
+
+#nav-links li:hover {
+    background: #aaa;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
