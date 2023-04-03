@@ -23,7 +23,7 @@
         console.log(parsedData);
 
         for (let x in parsedData.data) {
-            document.getElementById("content").innerHTML += "<div class='image-block'><div class='image-display'><img src='" + parsedData.data[0].images.thumbnail + "'><p class='title'>" + parsedData.data[0].title + "</p><p class='caption'>" + parsedData.data[0].caption + "</p></div></div>";
+            document.getElementById("content").innerHTML += "<div class='image-block'><div class='image-display'><img src='" + parsedData.data[x].images.thumbnail + "'><p class='title'>" + parsedData.data[x].title + "</p><p class='caption'>" + parsedData.data[x].caption + "</p></div></div>";
         }
     </script>
 </body>

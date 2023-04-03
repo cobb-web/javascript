@@ -17,9 +17,11 @@
     <script>
         var imageData = '{"original":"images/pexels-anna-shvets-5894032.jpg","large":"images/pexels-anna-shvets-5894032-large.jpg","thumbnail":"images/pexels-anna-shvets-5894032-thumb.jpg","title":"Don\'t Look at ME, Look at THESE","caption":"Anna Shvets loves her fresh plants and wants you to see them."}';
 
-        var parsedData = JSON.parse(imageData);
+        parsedData = JSON.parse(imageData);
 
-        document.getElementById("content").innerHTML = "<div class='image-display'><img src='" + thumbnail + "'><p class='title'>" + title + "</p><p class='caption'>" + caption + "</p></div>";
+        console.log(parsedData);
+
+        document.getElementById("content").innerHTML = "<div class='image-display'><img src='" + parsedData.thumbnail + "'><p class='title'>" + parsedData.title + "</p><p class='caption'>" + parsedData.caption + "</p></div>";
     </script>
 </body>
 </html>
