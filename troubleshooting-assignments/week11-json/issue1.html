@@ -1,0 +1,25 @@
+<!--
+    This should show an image, title, and caption, but it says "undefined". (fix and submit)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using JSON</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+        var imageData = '{"original":"images/pexels-anna-shvets-5894032.jpg","large":"images/pexels-anna-shvets-5894032-large.jpg","thumbnail":"images/pexels-anna-shvets-5894032-thumb.jpg","title":"Don\'t Look at ME, Look at THESE","caption":"Anna Shvets loves her fresh plants and wants you to see them."}';
+
+        var parsedData = JSON.stringify(imageData);
+
+        document.getElementById("content").innerHTML = "<div class='image-display'><img src='" + parsedData.thumbnail + "'><p class='title'>" + parsedData.title + "</p><p class='caption'>" + parsedData.caption + "</p></div>";
+    </script>
+</body>
+</html>

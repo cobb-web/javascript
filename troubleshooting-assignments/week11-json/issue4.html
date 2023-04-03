@@ -1,0 +1,64 @@
+<!--
+    Assume imageObj is the data from parsing the JSON string. I want the second image in the array, not the first. (fix and submit)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using JSON</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+        var imageObj = {
+            data: 
+            [
+                {
+                    images: 
+                    {
+                        original: "images/pexels-anna-shvets-5894032.jpg",
+                        large: "images/pexels-anna-shvets-5894032-large.jpg",
+                        thumbnail: "images/pexels-anna-shvets-5894032-thumb.jpg"
+                    },
+                    title: "Don\'t Look at ME, Look at THESE",
+                    caption: "Anna Shvets loves her fresh plants and wants you to see them."
+                }
+                ,
+                {   
+                    images: 
+                    {
+                        original: "images/pexels-brett-sayles-12408308.jpg",
+                        large: "images/pexels-brett-sayles-12408308-large.jpg",
+                        thumbnail: "images/pexels-brett-sayles-12408308-thumb.jpg"
+                    },
+                    title: "You Are Loved",
+                    caption: "Brett Sayles wants you to know that you are loved, maybe not by him, but by someone in your life."
+                },
+                {   
+                    images: 
+                    {
+                        original: "images/pexels-julie-aagaard-2351286.jpg",
+                        large: "images/pexels-julie-aagaard-2351286-large.jpg",
+                        thumbnail: "images/pexels-julie-aagaard-2351286-thumb.jpg"
+                    },
+                    title: "Public Transportation is Better in Other Cities",
+                    caption: "Julie Aagaard shows off her city's wonderful public transportation system."
+                }
+            ]
+        };
+
+        var imageData = JSON.stringify(imageObj);
+
+        parsedData = JSON.parse(imageData);
+
+        console.log(parsedData);
+
+        document.getElementById("content").innerHTML = "<div class='image-display'><img src='" + parsedData.data[0].images.thumbnail + "'><p class='title'>" + parsedData.data[0].title + "</p><p class='caption'>" + parsedData.data[0].caption + "</p></div>";
+    </script>
+</body>
+</html>

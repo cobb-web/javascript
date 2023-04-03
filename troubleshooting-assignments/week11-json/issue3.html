@@ -1,0 +1,62 @@
+<!--
+    I need to send a JSON string based on my javascript object to an API and to verify I have the code correct, I want to display that string in the HTML. 
+    What step am I missing? Update the imageData variable on line 57.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using JSON</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="content">This should be a JSON string.</div>
+
+    <script>
+
+        var imageObj = {
+            data: 
+            [
+                {
+                    images: 
+                    {
+                        original: "images/pexels-anna-shvets-5894032.jpg",
+                        large: "images/pexels-anna-shvets-5894032-large.jpg",
+                        thumbnail: "images/pexels-anna-shvets-5894032-thumb.jpg"
+                    },
+                    title: "Don\'t Look at ME, Look at THESE",
+                    caption: "Anna Shvets loves her fresh plants and wants you to see them."
+                }
+                ,
+                {   
+                    images: 
+                    {
+                        original: "images/pexels-brett-sayles-12408308.jpg",
+                        large: "images/pexels-brett-sayles-12408308-large.jpg",
+                        thumbnail: "images/pexels-brett-sayles-12408308-thumb.jpg"
+                    },
+                    title: "You Are Loved",
+                    caption: "Brett Sayles wants you to know that you are loved, maybe not by him, but by someone in your life."
+                },
+                {   
+                    images: 
+                    {
+                        original: "images/pexels-julie-aagaard-2351286.jpg",
+                        large: "images/pexels-julie-aagaard-2351286-large.jpg",
+                        thumbnail: "images/pexels-julie-aagaard-2351286-thumb.jpg"
+                    },
+                    title: "Public Transportation is Better in Other Cities",
+                    caption: "Julie Aagaard shows off her city's wonderful public transportation system."
+                }
+            ]
+        };
+
+        var imageData = "";
+
+        document.getElementById("content").innerHTML = imageData;
+    </script>
+</body>
+</html>
