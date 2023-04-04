@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title of the Webpage</title>
+        <script src="obj.js"></script>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="content"></div>
+        
+        <div id="content-JSON"></div>
+        
+        <script>
+            var isSmartCar;
+            
+            if (parsedData.smartCar) {
+                isSmartCar = "it is a smart car.";
+            }
+            else {
+                isSmartCar = "";
+            }
+            
+            document.getElementById("content").innerHTML = "This car is the " + 
+            parsedData.model + " " + "version of " + parsedData.brand + " with a " + 
+            parsedData.suspension + " suspension " + "and " + isSmartCar;
+            
+            document.getElementById("content-JSON").innerHTML = CarStringified;
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>
