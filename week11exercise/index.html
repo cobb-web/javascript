@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title of the Webpage</title>
+        <script src="obj.js"></script>
+    </head>
+    <body>
+        <header></header>
+        
+        <div id="content"></div>
+        
+        <div id="content-JSON"></div>
+        
+        <script>
+            
+            document.getElementById("content").innerHTML += "The winner is " + 
+            parsedData.firstname + " " + parsedData.lastname + " who is " + parsedData.age + " years old. <br>"; 
+            
+            document.getElementById("content-JSON").innerHTML = personStringified; 
+
+
+            document.getElementById("content").innerHTML += "The first runner up is " + 
+            parsedData2.firstname + " " + parsedData2.lastname + " who is " + parsedData2.age + " years old. <br>";  
+
+            document.getElementById("content-JSON").innerHTML = personBStringified; 
+
+
+            document.getElementById("content").innerHTML += "The second runner up is " + 
+            parsedData3.firstname + " " + parsedData3.lastname + " who is " + parsedData3.age + " years old. <br>"; 
+
+            document.getElementById("content-JSON").innerHTML = personCStringified; 
+
+        </script>
+        
+        <footer></footer>
+    </body>
+</html>
