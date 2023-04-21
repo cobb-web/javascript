@@ -95,6 +95,7 @@
                 var wrongSound = new Audio('negative_beeps-6008.mp3');
                 var winnerSound = new Audio('success-fanfare-trumpets-6185.mp3');
                 var lostSound = new Audio('wah-wah-sad-trombone-6347.mp3');
+                var restartSound = new Audio('game-bonus-144751.mp3');
                 
                 
             
@@ -163,6 +164,7 @@
 
                 function restartGame(){
                     location.reload();
+                   
                     // document.getElementById("disResult").style.display = "none";
                     // document.getElementById("result").style.display = "none";
                     // score= 0;
@@ -170,6 +172,7 @@
                     // robotscore = 0;
                     // reload();
                 }
+                restartSound.play();
 
 
                 const numRounds = 5;
