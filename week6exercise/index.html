@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="item-form">
+      <input type="hidden" id="id" name="id" value="" />
+      <label for="item">Item: </label><br />
+      <input type="text" id="item" name="item" /><br />
+      <label for="amount">Amount: </label><br />
+      <input type="number" id="amount" name="amount" /><br /><br />
+    </form>
+
+    <div
+      id="addbtn"
+      style="
+        display: inline-block;
+        background: rgb(197, 255, 220);
+        cursor: pointer;
+      "
+      onclick="addToList()"
+    >
+      Add to Bag
+    </div>
+
+    <div
+      id="updatebtn"
+      style="display: none; background: rgb(197, 255, 220); cursor: pointer"
+      onclick="saveItem()"
+    >
+      Update Item
+    </div>
+
+    <div id="list"></div>
+
+    <script>
+
+         class listItem {
+         constructor(id, name, amount) {
+      	  this.id = id;
+      	  this.name = name;
+      	  this.amount = amount;
+      	}
+      }
+
+          var items = [ ];
+
+          function addToList() {
+
+            if (document.forms["item-form"]["item"].value == ""){
+                alert("Please fill out an item");
+            
+                if (document.forms["item-form"]["amount"].value == ""){
+                    alert("Please fill out an amount");
+                }
+            }
+            
+            else{
+              let itemEntered = document.forms["item-form"]["item"].value;
+              let amountEntered = document.forms["item-form"]["amount"].value;
+
+
+              if (items.length > 0){
+                  var id = items[items.length - 1].id + 1;
+
+              }
+
+              else{
+                  var id = 1;
+              }
+
+              items.push(new listItem(id, itemEntered, amountEntered));
+
+              displayList();
+
+              clearForm();
+            }
+          }
+        
+
+          function displayList(){
+              document.getElementById("list").innerHTML = "";
+
+              for (let item in items){
+                  document.getElementById("list").innerHTML += items[item].id + " - " + items[item].name + " - " + items[item].amount + "<span onclick='removeItem(" + items[item].id + ")'>[Remove]</span><span onclick='updateItem(" + items[item].id + ")'>[Update]</span><br>";
+              }
+
+          }
+
+          function clearForm() {
+              document.forms["item-form"]["item"].value = "";
+              document.forms["item-form"]["amount"].value = "";
+          }
+
+          function removeItem(idToRemove){
+
+              for (let item in items){
+                  if (items[item].id == idToRemove) {
+                  items.splice(item, 1);
+                  }
+              }
+              displayList();
+          }
+
+          function updateItem (idToUpdate){
+          for (let item in items){
+              if (items[item].id == idToUpdate){
+              document.forms["item-form"]["id"].value = items[item].id;
+              document.forms["item-form"]["item"].value = items[item].name;
+              document.forms["item-form"]["amount"].value = items[item].amount;
+              }
+          }
+          document.getElementById("addbtn").style.display= "none";
+          document.getElementById("updatebtn").style.display= "inline-block";
+      }
+
+          function saveItem(){
+              for (let item in items){
+                  if (items[item].id == document.forms["item-form"]["id"].value){
+                    items[item].name =  document.forms["item-form"]["item"].value;
+                    items[item].amount = document.forms["item-form"]["amount"].value
+              }
+          }
+          displayList();
+          clearForm();
+        
+          document.getElementById("updatebtn").style.display= "none";
+          document.getElementById("addbtn").style.display= "inline-block";
+        }
+
+    </script>
+  </body>
+</html>
