@@ -1,0 +1,56 @@
+
+.lost-image{
+    width: 800px;
+    height: auto;
+    position: absolute;
+    top: 200px;
+    left: 290px;
+    
+  
+}
+
+.won-image {
+    width: 800px;
+    height: auto;
+    position: absolute;
+    top: 200px;
+    left: 290px;
+  
+}
+
+#result {
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 2;
+}
+
+.try-againbtn{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 500px;
+    left: 480px;
+
+}
+
+.play-againbtn{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 500px;
+    left: 480px;
+
+}
+
+#correct_gif2 {
+    width: 800px;
+    position: absolute;
+    top: 500px;
+    left: 450px;
+
+}
+
+.screen-effect {
+    width: 1500px;
+  }
